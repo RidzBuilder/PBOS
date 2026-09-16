@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Platform Adaptation",
+  "type": "object",
+  "required": ["id", "master_story_id", "platform", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "master_story_id": {"type": "string"},
+    "platform": {"type": "string"},
+    "format": {"type": ["string", "null"]},
+    "hook": {"type": ["string", "null"]},
+    "caption": {"type": ["string", "null"]},
+    "cta": {"type": ["string", "null"]},
+    "status": {"type": "string", "enum": ["draft", "ready", "published", "archived"]}
+  },
+  "additionalProperties": false
+}
