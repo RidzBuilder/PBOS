@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Publication",
+  "type": "object",
+  "required": ["id", "adaptation_id", "platform", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "adaptation_id": {"type": "string"},
+    "platform": {"type": "string"},
+    "status": {"type": "string", "enum": ["scheduled", "published", "failed", "removed", "archived"]},
+    "published_at": {"type": ["string", "null"]},
+    "external_reference": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
