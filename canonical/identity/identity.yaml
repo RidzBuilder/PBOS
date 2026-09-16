@@ -1,0 +1,17 @@
+version: "1.0"
+status: "locked"
+person: "Ridz"
+public_brand: "Ridz Builds"
+core_identity: "AI Builder in Progress"
+primary_tagline: "Learning AI by Building."
+community_invitation: "Build With Ridz"
+operating_mode: "Building in Public"
+domain:
+  - AI
+  - Agents
+  - Systems
+  - Automation
+identity_rules:
+  - "Ridz is the person; Ridz Builds is the public brand."
+  - "Learning AI by Building describes the operating method."
+  - "Build With Ridz is a community invitation, not a replacement brand."
