@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Content Item",
+  "type": "object",
+  "required": ["id", "source_type", "status", "title"],
+  "properties": {
+    "id": {"type": "string"},
+    "source_type": {
+      "type": "string",
+      "enum": ["learn", "experiment", "build", "think", "journey", "explore", "discuss"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["captured", "selected", "mastered", "adapted", "ready", "published", "observed", "learned", "archived"]
+    },
+    "title": {"type": "string"},
+    "master_story_id": {"type": ["string", "null"]},
+    "platforms": {"type": "array", "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
