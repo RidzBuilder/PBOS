@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Opportunity",
+  "type": "object",
+  "required": ["id", "signal", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "signal": {"type": "string"},
+    "status": {"type": "string", "enum": ["signal", "evaluating", "decision_pending", "accepted", "declined", "active", "completed", "learned"]},
+    "decision_id": {"type": ["string", "null"]},
+    "outcome": {"type": ["string", "null"]},
+    "learning": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
