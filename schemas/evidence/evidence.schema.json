@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Evidence",
+  "type": "object",
+  "required": ["id", "type", "observation", "source"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"type": "string", "enum": ["observation", "experiment_result", "publication_result", "audience_signal", "relationship_signal", "analytics"]},
+    "observation": {"type": "string"},
+    "source": {"type": "string"},
+    "date": {"type": "string"},
+    "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+    "canonicalized": {"type": "boolean", "default": false}
+  },
+  "additionalProperties": false
+}
