@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Relationship",
+  "type": "object",
+  "required": ["id", "person_reference", "state", "evidence_ids"],
+  "properties": {
+    "id": {"type": "string"},
+    "person_reference": {"type": "string"},
+    "state": {"type": "string"},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
