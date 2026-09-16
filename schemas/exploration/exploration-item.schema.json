@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Exploration Item",
+  "type": "object",
+  "required": ["id", "title", "mode", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "mode": {"type": "string", "enum": ["education", "discussion", "exploration"]},
+    "status": {"type": "string", "enum": ["idea", "draft", "published", "learned", "archived"]},
+    "related_domains": {"type": "array", "items": {"type": "string"}},
+    "source_work": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
