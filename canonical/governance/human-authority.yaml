@@ -1,0 +1,24 @@
+version: "1.0"
+status: "locked"
+human_authority:
+  owner: "Ridz"
+  final_authority:
+    - "identity"
+    - "strategic_intent"
+    - "publishing_authorization"
+    - "relationship_decisions"
+    - "opportunity_decisions"
+    - "final_decisions"
+ai_role:
+  allowed:
+    - "organize context"
+    - "surface dependencies"
+    - "identify contradictions"
+    - "compare options"
+    - "track consequences"
+    - "support learning"
+  prohibited:
+    - "final personal-brand decisions"
+    - "implicit consent"
+    - "unauthorized external publication"
+    - "automatic strategic decisions from metrics"
