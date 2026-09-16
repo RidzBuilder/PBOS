@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Community Item",
+  "type": "object",
+  "required": ["id", "type", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "type": {"type": "string", "enum": ["participation", "discussion", "event", "group", "community_signal"]},
+    "status": {"type": "string"},
+    "relationship_ids": {"type": "array", "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
