@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Decision",
+  "type": "object",
+  "required": ["id", "context", "decision", "authority", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "context": {"type": "string"},
+    "options": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "affected_domains": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["identity", "content", "launch", "relationship", "exploration", "opportunity", "community", "decision"]
+      }
+    },
+    "decision": {"type": "string"},
+    "authority": {"type": "string", "const": "Ridz"},
+    "status": {"type": "string", "enum": ["proposed", "authorized", "implemented", "reviewed", "superseded"]},
+    "outcome": {"type": ["string", "null"]},
+    "learning": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}
