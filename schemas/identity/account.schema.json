@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Account",
+  "type": "object",
+  "required": ["id", "platform", "profile_name", "brand"],
+  "properties": {
+    "id": {"type": "string"},
+    "platform": {"type": "string"},
+    "profile_name": {"type": "string"},
+    "handle": {"type": ["string", "null"]},
+    "brand": {"type": "string", "const": "Ridz Builds"},
+    "identity_reference": {"type": "string"},
+    "bio": {"type": ["string", "null"]},
+    "cta": {"type": ["string", "null"]},
+    "status": {"type": "string", "enum": ["planned", "created", "configured", "verified", "inactive"]}
+  },
+  "additionalProperties": false
+}
