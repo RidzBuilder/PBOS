@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PBOS Master Story",
+  "type": "object",
+  "required": ["id", "title", "source_work", "status"],
+  "properties": {
+    "id": {"type": "string"},
+    "title": {"type": "string"},
+    "source_work": {"type": "string"},
+    "source_type": {"type": "string"},
+    "status": {"type": "string", "enum": ["draft", "approved", "adapted", "published", "archived"]},
+    "derivative_ids": {"type": "array", "items": {"type": "string"}},
+    "evidence_ids": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
