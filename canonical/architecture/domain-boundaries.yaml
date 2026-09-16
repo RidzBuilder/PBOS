@@ -1,0 +1,34 @@
+version: "1.0"
+status: "locked"
+domains:
+  identity:
+    owns: ["public identity", "brand representation", "identity consistency"]
+  content:
+    owns: ["content lifecycle", "stories", "derivatives", "publication content"]
+  launch:
+    owns: ["account activation", "launch sequencing", "launch readiness"]
+  relationship:
+    owns: ["meaningful interpersonal/public relationship states"]
+  exploration:
+    owns: ["education", "discussion", "adjacent exploration connected to the journey"]
+  opportunity:
+    owns: ["opportunity lifecycle", "opportunity evaluation context"]
+  community:
+    owns: ["collective participation", "community structures"]
+  decision:
+    owns: ["explicit decisions", "decision records", "decision lifecycle"]
+cross_layer_capability:
+  name: "Cross-Layer Decision Coherence"
+  type: "horizontal_governance_capability"
+  must_not_own:
+    - identity
+    - content
+    - launch
+    - relationship
+    - exploration
+    - opportunity
+    - community
+  purpose:
+    - "surface cross-domain impact"
+    - "preserve coherence"
+    - "record dependencies and trade-offs"
