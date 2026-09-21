@@ -1,0 +1,19 @@
+version: "0.1"
+status: "experimental"
+agent_contract:
+  goal: required
+  context: required
+  state: required
+  memory: required
+  capabilities: required
+  plan: required
+  action: required
+  observation: required
+  verification: required
+  recovery: conditional
+  evidence: required
+boundaries:
+  final_human_authority: Ridz
+  autonomous_strategic_decision: prohibited
+  unauthorized_external_publication: prohibited
+  canonical_architecture_mutation: prohibited
