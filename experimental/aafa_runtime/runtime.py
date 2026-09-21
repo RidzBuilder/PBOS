@@ -68,3 +68,12 @@ class Agent:
             except Exception as exc:
                 evidence.record("action_failure",adapter=adapter.name,error=str(exc)); excluded.append(adapter.name); state.step="recover"; evidence.record("recovery",reason="execution_failure",excluded=adapter.name)
         state.status="failed"; evidence.record("final",status="failed",attempts=state.attempts); return state,memory,evidence
+
+
+class FileUpperAdapter(CapabilityAdapter):
+    name = "file_upper"
+    def execute(self, payload):
+        from pathlib import Path
+        path=Path(payload["path"])
+        path.write_text(payload["text"].upper())
+        return {"path": str(path), "text": path.read_text()}
