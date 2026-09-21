@@ -20,7 +20,7 @@ def test_verification_failure_recovers():
     assert s.status=="verified" and s.attempts==2
 
 if __name__=="__main__":
-    test_happy_path_and_adapter_swap(); test_recovery_after_failure(); test_verification_failure_recovers(); print("PBOS_RUNTIME_CONFORMANCE=PASS")
+    test_happy_path_and_adapter_swap(); test_recovery_after_failure(); test_verification_failure_recovers(); test_real_local_environment_execution(); print("PBOS_RUNTIME_CONFORMANCE=PASS")
 
 
 def test_real_local_environment_execution():
