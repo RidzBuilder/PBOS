@@ -21,3 +21,12 @@ def test_verification_failure_recovers():
 
 if __name__=="__main__":
     test_happy_path_and_adapter_swap(); test_recovery_after_failure(); test_verification_failure_recovers(); print("PBOS_RUNTIME_CONFORMANCE=PASS")
+
+
+def test_real_local_environment_execution():
+    from pathlib import Path
+    p=Path('/tmp/pbos_environment_artifact.txt')
+    reg=CapabilityRegistry([FileUpperAdapter()]); agent=Agent(reg,Verifier())
+    expected={"path":str(p),"text":"RIDZ"}
+    s,m,e=agent.run("write artifact",{"path":str(p),"text":"Ridz"},expected,preferred="file_upper")
+    assert s.status=="verified" and p.read_text()=="RIDZ"
