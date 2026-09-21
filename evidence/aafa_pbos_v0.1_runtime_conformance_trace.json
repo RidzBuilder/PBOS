@@ -1,17 +1,18 @@
 {
-  "campaign": "AAFA REMEDIATION & CONFORMANCE CAMPAIGN — PBOS v0.1",
-  "execution": "local deterministic conformance",
-  "status": "verified",
-  "attempts": 2,
-  "events": [
-    {"kind":"goal","goal":"transform and recover"},
-    {"kind":"capability_resolved","capability":"transform_text","adapter":"failing"},
-    {"kind":"action_failure","adapter":"failing","error":"simulated adapter failure"},
-    {"kind":"recovery","reason":"execution_failure","excluded":"failing"},
-    {"kind":"capability_resolved","capability":"transform_text","adapter":"upper"},
-    {"kind":"action_result","adapter":"upper","result":{"text":"RIDZ"},"verified":true},
-    {"kind":"final","status":"verified","attempts":2}
+  "campaign":"AAFA REMEDIATION & CONFORMANCE CAMPAIGN — PBOS v0.1",
+  "execution":"local deterministic conformance",
+  "status":"verified",
+  "tests":["happy_path","adapter_swap","execution_failure_recovery","verification_failure_recovery","real_local_environment_execution"],
+  "recovery_attempts":2,
+  "trace":[
+    {"kind":"capability_resolved","adapter":"failing"},
+    {"kind":"action_failure","adapter":"failing"},
+    {"kind":"recovery","excluded":"failing"},
+    {"kind":"capability_resolved","adapter":"upper"},
+    {"kind":"action_result","adapter":"upper","verified":true},
+    {"kind":"final","status":"verified"}
   ],
-  "test_command": "python3 test_runtime.py",
-  "test_result": "PBOS_RUNTIME_CONFORMANCE=PASS"
+  "environment_test":{"adapter":"file_upper","artifact":"local filesystem","verified":true},
+  "test_command":"python3 test_runtime.py",
+  "test_result":"PBOS_RUNTIME_CONFORMANCE=PASS"
 }
