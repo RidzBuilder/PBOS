@@ -13,5 +13,20 @@
 | REM-09 Evidence & Trace | Evidence event stream + committed trace | PASS |
 | REM-10 Adversarial Conformance | failure, verification mismatch, adapter swap, environment tests | PASS |
 
+## Remote CI Evidence
+
+- Workflow: **AAFA Runtime Conformance**
+- Run: **#11**
+- Run ID: **35687942700**
+- Head SHA: **55b950178ebd6b80e16b23b23b361f543e27b897**
+- Conclusion: **success**
+- Test command: `python3 experimental/aafa_runtime/test_runtime.py`
+- Test result: `PBOS_RUNTIME_CONFORMANCE=PASS`
+
 ## Qualification
+
 This is a **minimum experimental conformance runtime**, not a production agent and not a claim that all possible agent architectures are covered.
+
+## Gate State
+
+**AAFA 00–15: PASS / CLOSED — scoped experimental conformance baseline.**
